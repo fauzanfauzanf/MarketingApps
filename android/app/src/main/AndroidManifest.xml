@@ -9,7 +9,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="marketing_apps"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -27,7 +27,16 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+	            <action android:name="android.intent.action.VIEW"/>
+	            <category android:name="android.intent.category.DEFAULT"/>
+	            <category android:name="android.intent.category.BROWSABLE"/>
+                 <!-- TODO: Change the link -->
+	            <data android:host="https://marketingapp.page.link/d6o5"/>
+	            <data android:host="https://marketingapp.page.link/d6o5k"/>
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
